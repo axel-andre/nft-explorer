@@ -3,9 +3,7 @@ ports:
     onOpen: open-preview
 tasks:
   - init: yarn install 
-    command: |
-    export HMR_HOST=`gp url 3000`
-    npm run dev
+    command: npm run dev
 github:
   prebuilds:
     # enable for the master/default branch (defaults to true)
