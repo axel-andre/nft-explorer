@@ -1,6 +1,3 @@
-ports:
-  - port: 3001
-    onOpen: open-preview
 tasks:
   - init: yarn install 
     command: npm run dev
