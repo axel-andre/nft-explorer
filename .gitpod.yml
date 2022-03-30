@@ -1,6 +1,11 @@
+image: marcopeg/gitpod-workspace-postgres:2.5.0
 ports:
   - port: 3001
     onOpen: open-preview
+  - port: 8008
+    onOpen: ignore
+  - port: 5432
+    onOpen: ignore
 tasks:
   - init: yarn install
     command: |
