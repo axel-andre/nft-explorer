@@ -1,5 +1,8 @@
+ports:
+  - port: 3001
+    onOpen: open-preview
 tasks:
-  - init: yarn install 
+  - init: yarn install
     command: |
       # Configure the backend API
       export API_URL=`gp url 3000`
