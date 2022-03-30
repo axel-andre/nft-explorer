@@ -5,7 +5,7 @@ import { UpdateNftDto } from './dto/update-nft.dto';
 
 @Controller('nfts')
 export class NftsController {
-  constructor(private readonly nftsService: NftsService) {}
+  constructor(private readonly nftsService: NftsService) { }
 
   @Post()
   create(@Body() createNftDto: CreateNftDto) {
@@ -25,10 +25,5 @@ export class NftsController {
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateNftDto: UpdateNftDto) {
     return this.nftsService.update(+id, updateNftDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.nftsService.remove(+id);
   }
 }

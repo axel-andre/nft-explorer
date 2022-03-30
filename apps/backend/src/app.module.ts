@@ -4,12 +4,13 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { NftsModule } from './nfts/nfts.module';
 
-console.log(process.env)
 @Module({
   imports: [NftsModule, TypeOrmModule.forRoot({
     url: process.env.DATABASE_URL,
     type: 'postgres',
-    port: 5432
+    port: 5432,
+    synchronize: true,
+    autoLoadEntities: true
   })],
   controllers: [AppController],
   providers: [AppService],

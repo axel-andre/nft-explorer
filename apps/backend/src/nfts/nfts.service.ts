@@ -1,15 +1,19 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 import { CreateNftDto } from './dto/create-nft.dto';
 import { UpdateNftDto } from './dto/update-nft.dto';
+import { Nft } from './entities/nft.entity';
 
 @Injectable()
 export class NftsService {
+  constructor(@InjectRepository(Nft) private nftRepository: Repository<Nft>){}
   create(createNftDto: CreateNftDto) {
     return 'This action adds a new nft';
   }
 
-  findAll() {
-    return `This action returns all nfts`;
+  findAll(filters: Partial<Nft> = {}) {
+    return this.nftRepository.find(filters);
   }
 
   findOne(id: number) {
@@ -20,7 +24,4 @@ export class NftsService {
     return `This action updates a #${id} nft`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} nft`;
-  }
 }
