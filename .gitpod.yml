@@ -1,10 +1,9 @@
 tasks:
   - init: yarn install 
-    env:
-      API_URL: gp url 3000
     command: |
       # Configure the backend API
-      echo $API_URL
+      export API_URL=`gp url 3000`
+      npm run dev
 github:
   prebuilds:
     # enable for the master/default branch (defaults to true)
