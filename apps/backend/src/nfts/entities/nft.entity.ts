@@ -8,8 +8,8 @@ export class Nft {
     name: string;
     @Column()
     picture: string;
-    @Column({type: 'bigint'})
-    adresse: bigint;
+    @Column()
+    owner: string;
     @CreateDateColumn()
     createdDate: Date;
     @UpdateDateColumn()

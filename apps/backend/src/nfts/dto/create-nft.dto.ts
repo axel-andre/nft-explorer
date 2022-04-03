@@ -6,7 +6,7 @@ export class CreateNftDto {
     name: string;
     @IsString()
     @IsNotEmpty()
-    adresse: bigint;
+    owner: string;
     @IsString()
     @IsNotEmpty()
     picture: string;

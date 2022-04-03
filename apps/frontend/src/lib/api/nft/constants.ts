@@ -1,4 +1,4 @@
 export const endpoints = {
-    BASE: '/nft/',
-    FETCH_ONE: (id: string) => `/nft/${id}`
+    BASE: '/nfts/',
+    FETCH_ONE: (id: string) => `/nfts/${id}`
 }

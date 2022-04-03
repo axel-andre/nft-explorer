@@ -19,11 +19,11 @@ export class NftsController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.nftsService.findOne(+id);
+    return this.nftsService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateNftDto: UpdateNftDto) {
-    return this.nftsService.update(+id, updateNftDto);
+    return this.nftsService.update(id, updateNftDto);
   }
 }

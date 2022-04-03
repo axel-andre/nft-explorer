@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { NftsModule } from './nfts/nfts.module';
+import { SeedModule } from './seed/seed.module';
 
 @Module({
   imports: [NftsModule, TypeOrmModule.forRoot({
@@ -11,7 +12,7 @@ import { NftsModule } from './nfts/nfts.module';
     port: 5432,
     synchronize: true,
     autoLoadEntities: true
-  })],
+  }), SeedModule],
   controllers: [AppController],
   providers: [AppService],
 })

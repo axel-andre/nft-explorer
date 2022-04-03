@@ -7,6 +7,7 @@ import { Nft } from './entities/nft.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([Nft])],
   controllers: [NftsController],
-  providers: [NftsService]
+  providers: [NftsService],
+  exports: [NftsService]
 })
 export class NftsModule {}
