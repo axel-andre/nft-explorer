@@ -9,6 +9,9 @@
     },
     "dev": {
       "cache": false
+    },
+    "seed": {
+      "cache": false
     }
   }
 }

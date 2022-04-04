@@ -1,8 +1,15 @@
+image: gitpod/workspace-postgres
+ports:
+  - port: 3001
+    onOpen: open-preview
 tasks:
-  - init: yarn install 
+  - init: yarn install
+    env:
+      DATABASE_URL: postgres://gitpod@localhost/
     command: |
       # Configure the backend API
       export API_URL=`gp url 3000`
+      npm run seed
       npm run dev
 github:
   prebuilds:
