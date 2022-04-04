@@ -30,8 +30,8 @@
 				margin: 0;
 			}
 			&__owner {
-				border:1px solid rgba(128, 128, 156, 0.6);
-                background-color: rgba(128, 128, 156, 0.2);
+				border: 1px solid rgba(128, 128, 156, 0.6);
+				background-color: rgba(128, 128, 156, 0.2);
 				padding: 0.25rem;
 				border-radius: 0.25rem;
 				margin-left: 4rem;
@@ -46,7 +46,7 @@
 		}
 		&__image {
 			border-radius: 0.25rem;
-            margin-top: 1rem;
+			margin-top: 1rem;
 		}
 	}
 </style>
