@@ -3,10 +3,11 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, {cors: {
-    origin: 'https://3001-axelandre-nftexplorer-fxmd7if1nh3.ws-eu38.gitpod.io',
+  const app = await NestFactory.create(AppModule);
+  app.enableCors({
     credentials: true,
-  }, });
+    origin: "*"
+  })
   app.useGlobalPipes(new ValidationPipe());
   await app.listen(3000);
 }

@@ -4,12 +4,12 @@ import { browser } from "$app/env";
 let API_URL = '/api'
 
 if (!browser) {
-    API_URL = process.env.API_URL
+    API_URL = 'http://localhost:3000/' 
 }
 const baseAxiosInstance = axios.create({
-    baseURL: API_URL
-})
-console.dir(API_URL);
+    baseURL: API_URL,
+    withCredentials: true
+});
 export class API {
     static axiosInstance = baseAxiosInstance;
     static NFT = new NFTRepository(this.axiosInstance);
