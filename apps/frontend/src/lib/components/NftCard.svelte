@@ -10,8 +10,9 @@
 
 	<img
 		class="nft-card__image"
-		src="https://i.picsum.photos/id/17/300/300.jpg?hmac=KxvSSOugjB6gpoBNWDjhfj5DxC8fvBVrp-vDzzFAMPo"
-		alt=""
+		src={picture}
+
+		alt="Picture of the NFT"
 	/>
 </div>
 
