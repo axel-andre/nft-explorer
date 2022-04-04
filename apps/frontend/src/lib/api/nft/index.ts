@@ -15,13 +15,8 @@ export default class NFTRepository {
     public async getAll(filters?: Partial<NFT>) {
         try {
 
-            const { status, statusText, data } = await this.axiosInstance.get(endpoints.BASE);
-            console.log(status)
-            return {
-                status,
-                statusText,
-                data
-            }
+            const { data } = await this.axiosInstance.get(endpoints.BASE);
+            return data;
         } catch (err) {
             console.log(err as AxiosError);
         }
