@@ -17,7 +17,6 @@
 	import NftCard from '$lib/components/NftCard.svelte';
 
 	export let nfts = [];
-	$: console.log(nfts);
 </script>
 
 <h1>Discover</h1>
